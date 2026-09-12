@@ -1,0 +1,137 @@
+/* =========================================================
+   SPARK Design System alt — globals.css
+   Base layer only. Every rule here exists in the source
+   (assets/tokens.css base rules + the two website pages' resets).
+   Import order: tokens.css → typography.css → globals.css
+   ========================================================= */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* From index.html / frankfurt.html: `* { box-sizing: border-box }` */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* From tokens.css: html, body { background/color/font-family } */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--surface);
+    color: var(--text);
+    font-family: var(--font-body);
+  }
+
+  /* From tokens.css: body { font-size / line-height / smoothing } */
+  body {
+    font-size: var(--fs-body);
+    line-height: var(--lh-base);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* From tokens.css: h1..h5 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: var(--lh-snug);
+    letter-spacing: -0.015em;
+  }
+
+  /* From the website pages: a { color: inherit; text-decoration: none } */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* No link colour is declared anywhere in the source beyond `inherit`.
+     The hover treatments that do exist are the nav underline
+     (border-bottom-color: var(--spark-oak)) and the footer
+     (color: var(--spark-paper)); both are scoped to their components. */
+  a:hover {
+    color: inherit;
+  }
+
+  /* From the website pages: img { display:block; max-width:100% } */
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* From tokens.css */
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: var(--s-6) 0;
+  }
+}
+
+@layer components {
+  /* --------------------------------------------------------
+     Utilities that exist verbatim in the source stylesheet
+     -------------------------------------------------------- */
+
+  /* tokens.css — subtle bronze material gradient, premium highlight only */
+  .bronze-material {
+    background:
+      radial-gradient(120% 80% at 30% 20%, rgba(232, 216, 184, .55) 0%, transparent 55%),
+      radial-gradient(120% 80% at 75% 85%, rgba(168, 139, 92, .45) 0%, transparent 60%),
+      linear-gradient(135deg, var(--spark-oak) 0%, var(--spark-oak-deep) 100%);
+  }
+
+  /* tokens.css */
+  .ink-cinematic {
+    background:
+      radial-gradient(80% 60% at 50% 0%, rgba(198, 168, 122, .14) 0%, transparent 70%),
+      var(--spark-ink);
+  }
+
+  /* index.html — .wrap (64px gutter) */
+  .spark-wrap {
+    max-width: var(--spark-site-wrap-max);
+    margin: 0 auto;
+    padding: 0 var(--spark-site-gutter-collection);
+  }
+
+  /* frankfurt.html — .wrap (56px gutter) */
+  .spark-wrap-house {
+    max-width: var(--spark-site-wrap-max);
+    margin: 0 auto;
+    padding: 0 var(--spark-site-gutter-house);
+  }
+
+  /* spacing.html — 8px baseline guide */
+  .spark-baseline {
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--ink-100),
+      var(--ink-100) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  }
+
+  /* logo.html — reverse mark on dark surfaces */
+  .spark-logo-invert {
+    filter: invert(1);
+  }
+}
+
+/* index.html — @keyframes heroZoom, verbatim (20s ease-out forwards) */
+@keyframes sparkHeroZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}

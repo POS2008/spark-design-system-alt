@@ -1,0 +1,215 @@
+/* =========================================================
+   SPARK Design System alt — tokens.css
+   SOURCE: /assets/tokens.css of "SPARK Design System alt"
+   Every value below is copied verbatim from that file.
+   Semantic aliases are added on top; no source value is altered.
+   ========================================================= */
+
+:root {
+  /* ---------------------------------------------------------
+     CORE BRAND — verbatim from source
+     --------------------------------------------------------- */
+  --spark-ink:        #0B0B0C;   /* cinematic ink */
+  --spark-paper:      #F6F3EE;   /* warm editorial paper */
+  --spark-concrete:   #E8E4DC;   /* soft architectural grey */
+  --spark-oak:        #C6A87A;   /* champagne bronze (material, not digital) */
+  --spark-oak-deep:   #A88B5C;   /* dark bronze — hover state */
+  --spark-oak-soft:   #E8D8B8;   /* light bronze tint — surfaces */
+
+  /* ---------------------------------------------------------
+     NEUTRAL SCALE (warm) — verbatim from source
+     --------------------------------------------------------- */
+  --ink-900: #0A0A0A;
+  --ink-800: #171717;
+  --ink-700: #2A2926;
+  --ink-600: #44423D;
+  --ink-500: #6E6B63;
+  --ink-400: #9A968B;
+  --ink-300: #C3BFB3;
+  --ink-200: #DFDCD1;
+  --ink-100: #EFEDE4;
+  --ink-050: #F7F5EE;
+
+  /* ---------------------------------------------------------
+     SEMANTIC — verbatim from source
+     --------------------------------------------------------- */
+  --surface:          var(--spark-paper);
+  --surface-alt:      var(--ink-050);
+  --surface-invert:   var(--spark-ink);
+  --text:             var(--ink-900);
+  --text-muted:       var(--ink-500);
+  --rule:             var(--ink-200);
+  --accent:           var(--spark-oak);
+
+  /* ---------------------------------------------------------
+     TYPE — verbatim from source
+     --------------------------------------------------------- */
+  --font-display: 'GT Super Display', 'Canela', 'Tiempos Headline', Georgia, serif;
+  --font-body:    'Söhne', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Type scale — generous, editorial */
+  --fs-display: clamp(3.5rem, 7vw, 7rem);
+  --fs-h1:      clamp(2.5rem, 4.5vw, 4rem);
+  --fs-h2:      clamp(1.75rem, 2.8vw, 2.5rem);
+  --fs-h3:      clamp(1.25rem, 1.6vw, 1.5rem);
+  --fs-lead:    1.25rem;
+  --fs-body:    1rem;
+  --fs-small:   0.8125rem;
+  --fs-micro:   0.6875rem;
+
+  --lh-tight: 0.95;
+  --lh-snug:  1.1;
+  --lh-base:  1.45;
+
+  --tracking-wide:   0.22em;
+  --tracking-label:  0.16em;
+
+  /* ---------------------------------------------------------
+     SPACING — verbatim from source
+     --------------------------------------------------------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+
+  /* ---------------------------------------------------------
+     SHAPE — verbatim from source
+     --------------------------------------------------------- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  /* ---------------------------------------------------------
+     SHADOW / ELEV — verbatim from source
+     --------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(10,10,10,.06), 0 1px 1px rgba(10,10,10,.04);
+  --shadow-md: 0 6px 18px rgba(10,10,10,.08), 0 2px 4px rgba(10,10,10,.04);
+  --shadow-lg: 0 24px 60px rgba(10,10,10,.18), 0 6px 12px rgba(10,10,10,.06);
+
+  /* ---------------------------------------------------------
+     LAYOUT — verbatim from source
+     --------------------------------------------------------- */
+  --grid-max: 1440px;
+  --grid-gutter: 24px;
+
+  /* =========================================================
+     SEMANTIC ALIAS LAYER
+     Added by this export for React/Tailwind consumption.
+     Each alias points at a source token — no new values.
+     ========================================================= */
+
+  /* Foreground */
+  --spark-fg-primary:   var(--text);          /* #0A0A0A */
+  --spark-fg-secondary: var(--text-muted);    /* #6E6B63 */
+  --spark-fg-tertiary:  var(--ink-400);       /* #9A968B */
+  --spark-fg-invert:    var(--spark-paper);   /* #F6F3EE */
+  --spark-fg-accent:    var(--spark-oak);     /* #C6A87A */
+  --spark-fg-accent-on-paper: var(--spark-oak-deep); /* #A88B5C */
+
+  /* Background */
+  --spark-bg-primary:   var(--surface);        /* #F6F3EE */
+  --spark-bg-secondary: var(--surface-alt);    /* #F7F5EE */
+  --spark-bg-invert:    var(--surface-invert); /* #0B0B0C */
+  --spark-bg-concrete:  var(--spark-concrete); /* #E8E4DC */
+  --spark-bg-accent:    var(--spark-oak);      /* #C6A87A */
+
+  /* Border */
+  --spark-border:        var(--rule);          /* #DFDCD1 */
+  --spark-border-strong: var(--spark-ink);     /* #0B0B0C */
+  --spark-border-quiet:  var(--ink-300);       /* #C3BFB3 — button ghost border */
+  --spark-border-invert: var(--ink-700);       /* #2A2926 — hairline on ink */
+
+  /* Spacing aliases */
+  --spark-space-1: var(--s-1);
+  --spark-space-2: var(--s-2);
+  --spark-space-3: var(--s-3);
+  --spark-space-4: var(--s-4);
+  --spark-space-5: var(--s-5);
+  --spark-space-6: var(--s-6);
+  --spark-space-7: var(--s-7);
+  --spark-space-8: var(--s-8);
+  --spark-space-9: var(--s-9);
+  --spark-space-10: var(--s-10);
+
+  /* Radius aliases. radius-0 is used literally in spacing.html; it has no
+     token in the source stylesheet, so it is declared here as 0px. */
+  --spark-radius-0:    0px;
+  --spark-radius-sm:   var(--radius-sm);
+  --spark-radius-md:   var(--radius-md);
+  --spark-radius-lg:   var(--radius-lg);
+  --spark-radius-pill: var(--radius-pill);
+
+  /* Shadow aliases */
+  --spark-shadow-sm: var(--shadow-sm);
+  --spark-shadow-md: var(--shadow-md);
+  --spark-shadow-lg: var(--shadow-lg);
+
+  /* Layout aliases */
+  --spark-grid-max: var(--grid-max);
+  --spark-grid-gutter: var(--grid-gutter);
+  --spark-grid-columns: 12;
+
+  /* =========================================================
+     WEBSITE-COLLECTION LITERALS
+     Values that appear inside the Website — Group (Collection)
+     source pages only (index.html, frankfurt.html). They are
+     literal rgba()/px values in the source, not tokens; they are
+     named here so components need not hard-code them.
+     ========================================================= */
+  --spark-site-wrap-max: 1440px;
+  --spark-site-gutter-collection: 64px;   /* index.html .wrap */
+  --spark-site-gutter-house: 56px;        /* frankfurt.html .wrap */
+  --spark-site-min-width: 1280px;         /* body { min-width } on both pages */
+
+  --spark-veil-nav-collection: rgba(246, 243, 238, .94);
+  --spark-veil-nav-house:      rgba(246, 243, 238, .88);
+  --spark-veil-nav-border:     rgba(11, 11, 12, .06);
+  --spark-veil-paper-72:       rgba(246, 243, 238, .72);
+  --spark-veil-paper-82:       rgba(246, 243, 238, .82);
+  --spark-veil-paper-78:       rgba(246, 243, 238, .78);
+  --spark-veil-paper-60:       rgba(246, 243, 238, .6);
+  --spark-veil-paper-55:       rgba(246, 243, 238, .55);
+  --spark-veil-paper-45:       rgba(246, 243, 238, .45);
+  --spark-veil-paper-35:       rgba(246, 243, 238, .35);
+  --spark-veil-paper-28:       rgba(246, 243, 238, .28);
+  --spark-veil-paper-18:       rgba(246, 243, 238, .18);
+  --spark-veil-paper-14:       rgba(246, 243, 238, .14);
+  --spark-veil-paper-10:       rgba(246, 243, 238, .1);
+  --spark-veil-paper-08:       rgba(246, 243, 238, .08);
+  --spark-veil-paper-05:       rgba(246, 243, 238, .05);
+  --spark-veil-oak-50:         rgba(198, 168, 122, .5);
+  --spark-veil-oak-35:         rgba(198, 168, 122, .35);
+  --spark-veil-oak-22:         rgba(198, 168, 122, .22);
+
+  /* Image protection scrims, verbatim */
+  --spark-scrim-hero-collection: linear-gradient(180deg, rgba(11,11,12,.45) 0%, rgba(11,11,12,.05) 35%, rgba(11,11,12,.25) 70%, rgba(11,11,12,.88) 100%);
+  --spark-scrim-hero-house:      linear-gradient(180deg, rgba(11,11,12,.35) 0%, rgba(11,11,12,.1) 30%, rgba(11,11,12,.25) 65%, rgba(11,11,12,.9) 100%);
+  --spark-scrim-dest:            linear-gradient(180deg, rgba(11,11,12,.15) 0%, rgba(11,11,12,.05) 40%, rgba(11,11,12,.82) 100%);
+  --spark-scrim-pillar:          linear-gradient(180deg, rgba(11,11,12,.25) 0%, rgba(11,11,12,.1) 40%, rgba(11,11,12,.85) 100%);
+  --spark-scrim-exp:             linear-gradient(180deg, rgba(11,11,12,0) 30%, rgba(11,11,12,.8) 100%);
+  --spark-scrim-cta-house:       radial-gradient(70% 50% at 50% 100%, rgba(198, 168, 122, .22) 0%, transparent 60%);
+
+  /* Space-card floor badge veils, verbatim from space-card.html */
+  --spark-veil-badge-ink:   rgba(10,10,10,.7);
+  --spark-veil-badge-paper: rgba(250,250,247,.85);
+
+  /* Space-card hover shadow, verbatim from index.html .space-card:hover */
+  --spark-shadow-card-hover: 0 24px 60px rgba(10,10,10,.08);
+
+  /* Motion — the only easings/durations present in the source */
+  --spark-dur-fast:  .15s;
+  --spark-dur-base:  .2s;
+  --spark-dur-slow:  .3s;
+  --spark-dur-image: 1.2s;
+  --spark-dur-image-slow: 1.4s;
+  --spark-ease: ease;
+  --spark-ease-image: cubic-bezier(.2,.6,.2,1);
+}

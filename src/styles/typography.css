@@ -1,0 +1,166 @@
+/* =========================================================
+   SPARK Design System alt — typography.css
+   @font-face blocks are verbatim from assets/tokens.css
+   (paths rewritten to /fonts/, the files are the same ones).
+   The .t-* utilities are verbatim from assets/tokens.css.
+   The .spec-* utilities are the documented specimen scale
+   from system/type.html — see README for the scale conflict.
+   ========================================================= */
+
+/* GT Super Display — editorial display face */
+@font-face {
+  font-family: 'GT Super Display';
+  src: url('/fonts/GT-Super-Display-Bold.woff2') format('woff2'),
+       url('/fonts/GT-Super-Display-Bold.woff') format('woff'),
+       url('/fonts/GT-Super-Display-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Söhne Buch — 400 */
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/S_hne-Buch.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Söhne Kräftig — 500 */
+@font-face {
+  font-family: 'Söhne';
+  src: url('/fonts/S_hne-Kr_ftig.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* No JetBrains Mono / IBM Plex Mono file ships with the source system —
+   --font-mono resolves through its fallback stack to ui-monospace. */
+
+/* ---------------------------------------------------------
+   Fluid scale — verbatim .t-* utilities from tokens.css
+   --------------------------------------------------------- */
+.t-display {
+  font-size: var(--fs-display);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+.t-h1 {
+  font-size: var(--fs-h1);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.t-h2 {
+  font-size: var(--fs-h2);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.t-h3 {
+  font-size: var(--fs-h3);
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+.t-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+.t-label {
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  font-weight: 500;
+}
+.t-eyebrow {
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+}
+
+/* ---------------------------------------------------------
+   Specimen scale — the fixed-px scale documented and rendered
+   in system/type.html. Kept separate from the fluid .t-* set
+   because the two disagree (see README → source conflicts).
+   --------------------------------------------------------- */
+.spec-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+.spec-h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.spec-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.spec-h3 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+.spec-lead {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  max-width: 52ch;
+}
+.spec-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 58ch;
+}
+.spec-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.spec-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+}
+.spec-mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+}
+
+/* Editorial italic — GT Super italic is used for single words inside
+   display lines across the website collection (em.it / h1 em). */
+.spark-italic {
+  font-style: italic;
+  font-family: var(--font-display);
+}
