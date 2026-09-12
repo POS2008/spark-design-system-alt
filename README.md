@@ -1,6 +1,18 @@
-# Import into Lovable
+# SPARK Design System alt — Lovable Skill
 
-In Lovable, open **Settings → Skills → Add → Upload ZIP** and select the packaged ZIP. Keep automatic use enabled if every SPARK project should load these rules whenever a request matches the description.
+Official SPARK design-system rules for Lovable. The repository intentionally contains no commercially licensed font binaries.
 
-This skill provides task-specific behavior. The React components, tokens, fonts and images belong in the separate SPARK Design System project.
+## Import from GitHub
 
+1. Open **Lovable → Settings → Skills → Add / Import**.
+2. Choose **GitHub repository**.
+3. Enter:
+   `https://github.com/POS2008/spark-design-system-alt`
+4. Select the root `SKILL.md`.
+5. Enable automatic use for SPARK customer-facing projects.
+
+## Scope
+
+This repository contains the Lovable AI behavior layer. It defines brand, typography, color, spacing, component-selection and source-parity rules.
+
+The production React components, design tokens and approved private font assets remain a separate implementation layer. Commercial fonts must be supplied privately by an authorized SPARK license holder.
